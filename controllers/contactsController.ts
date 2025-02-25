@@ -1,7 +1,7 @@
-// controllers/contactsController.ts
-
+import express from "express";
 import { Request, Response } from "express";
-import Contact from "../models/Contact"; // Assure-toi d'avoir un modèle Contact approprié
+
+// controllers/contactsController.ts
 
 // Récupérer tous les contacts
 export const getContacts = async (
@@ -82,3 +82,5 @@ export const deleteContact = async (
     return res.status(500).json({ error: "Erreur serveur" });
   }
 };
+
+export default contacts;

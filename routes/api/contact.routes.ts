@@ -1,31 +1,31 @@
 import express from "express";
-import { contactController } from "../../controllers/contact.controller";
+import { contactsController } from "/Users/rodolphleblanc/Desktop/contact-app-2025/controllers/contactsController.ts";
 
 const contactRouter = express.Router();
 
 /**
  * GET /api/contact
  */
-contactRouter.get("/", contactController.getContacts);
+contactRouter.get("/", contactsController.getContacts);
 
 /**
  * GET /api/contact/:id
  */
-contactRouter.get("/:id", contactController.getContactById);
+contactRouter.get("/:id", contactsController.getContactById);
 
 /**
  * POST /api/contact
  */
-contactRouter.post("/", contactController.createContact);
+contactRouter.post("/", contactsController.createContact);
 
 /**
  * PUT /api/contact/:id
  */
-contactRouter.put("/:id", contactController.updateContact);
+contactRouter.put("/:id", contactsController.updateContact);
 
 /**
  * DELETE /api/contact/:id
  */
-contactRouter.delete("/:id", contactController.deleteContact);
+contactRouter.delete("/:id", contactsController.deleteContact);
 
 export default contactRouter;
